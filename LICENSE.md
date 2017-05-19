@@ -1,0 +1,1 @@
+All credits of the content goes to www.learnpythonthehardway.org
