@@ -15,7 +15,7 @@ However, I would suggest you do not. Just completely ignore the idea of old styl
 new style classes and assume that Python always requires (object) when you make a class.
 Save your brain power for something important.
 
-For the meaning of "is-a" look over <a href= "Word Drills.png">Word Drills </a> picture.
+For the meaning of "is-a" look over <a href= "Word drills.png">Word Drills </a> picture.
 
 ### Using super() inside class
 class Mammal(object):
