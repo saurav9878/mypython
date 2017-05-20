@@ -32,7 +32,7 @@ rather than show you how to type them so that you have to figure it out.
 4. Finally, remove all the *.pyc files to make sure you're clean.
 
 ### Next, create a simple file ex47/game.py where you can put the code to test. This will be a very silly little class that we want to test with this code in it:
-'''python
+```python
 class Room(object):
 
     def __init__(self, name, description):
@@ -45,9 +45,9 @@ class Room(object):
 
     def add_paths(self, paths):
         self.paths.update(paths)
-'''
+```
 ### Once you have that file, change the unit test skeleton to this:
-'''python
+```python
 from nose.tools import *
 from ex47.game import Room
 
@@ -80,7 +80,7 @@ def test_map():
     assert_equal(start.go('west'), west)
     assert_equal(start.go('west').go('east'), start)
     assert_equal(start.go('down').go('up'), start)
-'''
+```
 #### This file imports the Room class you made in the ex47.game module
   so that you can do tests on it. There is then a set of tests that 
   are functions starting with test_. Inside each test case there's a 
@@ -113,12 +113,12 @@ Follow this general loose set of guidelines when making your tests:
    the best way to redesign something is to just delete it and start over.
 
 ### What You Should See
-'''
+```
 $ nosetests
 ...
 ----------------------------------------------------------------------
 Ran 3 tests in 0.008s
 
 OK
-'''
+```
 #### That's what you should see if everything is working right. Try causing an error to see what that looks like and then fix it.

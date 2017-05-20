@@ -1,4 +1,4 @@
-##Classes in Python
+## Classes in Python
 What happened is Python's original rendition of class was broken in many serious ways.
 By the time they admitted the fault it was too late, and they had to support it.
 In order to fix the problem, they needed some "new class" style so that the "old classes"
@@ -19,7 +19,7 @@ Save your brain power for something important.
 For the meaning of "is-a" look over <a href= "Word drills.png">Word Drills </a> picture.
 
 ## Using super() inside class
-'''python
+```python
 class Mammal(object):
   def __init__(self, mammalName):
     print(mammalName, 'is a warm-blooded animal.')
@@ -30,15 +30,15 @@ class Dog(Mammal):
     super().__init__('Dog')
     
 d1 = Dog()
-'''
-'''
+```
+```
 output: Dog has four legs.
         Dog is a warm-blooded animal.
-'''
+```
 ### No need the remember the name of base class to run methods
 ### That's how you can run the __init__ method of a parent(base) class reliably.
 ### Very useful in Multiple Inheritance:
-'''python
+```python
 class Animal:
   def __init__(self, animalName):
     print(animalName, 'is an animal.');
@@ -66,9 +66,9 @@ class Dog(NonMarineMammal, NonWingedMammal):
 d = Dog()
 print('')
 bat = NonMarineMammal('Bat') 
-'''
+```
 ### When you run the program, the output will be:
-'''
+```
 Dog has 4 legs.
 Dog can't swim.
 Dog can't fly.
@@ -78,7 +78,7 @@ Dog is an animal.
 Bat can't swim.
 Bat is a warm-blooded animal.
 Bat is an animal.
-'''
+```
 
 ## When to Use Inheritance or Composition
 
@@ -92,5 +92,4 @@ other classes.
 ### Use composition to package code into modules that are used in many different
 ### unrelated places and situations.
 
-### Use inheritance only when there are clearly related reusable pieces of code that
-### fit under a single common concept or if you have to because of something you're using.other classes.
+### Use inheritance only when there are clearly related reusable pieces of code that fit under a single common concept or if you have to because of something you're using other classes.

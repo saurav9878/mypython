@@ -6,19 +6,19 @@ sudo -H pip install lpthw.web
 ## Make a Simple "Hello World" Project
 Now you're going to make an initial very simple "Hello World" web
 application and project directory using lpthw.web. First, make your project directory:
-'''
+```
 $ cd projects
 $ mkdir gothonweb
 $ cd gothonweb
 $ mkdir bin gothonweb tests docs templates
 $ touch gothonweb/__init__.py
 $ touch tests/__init__.py
-'''
+```
 You'll be taking the game from Exercise 43 and making it into a web application,
 so that's why you're calling it gothonweb
 Before you do that, we need to create the most basic lpthw.web application
 possible. You need to write following in bin/app.py for actual web app to work
-'''python
+```python
 import web
 
 urls = (
@@ -36,28 +36,28 @@ class Index(object):
 
 if __name__ == "__main__":
     app.run()
-'''
+```
 ### Then run the application like this:
-'''
+```
 $ python bin/app.py
 http://0.0.0.0:8080/
 However, if you did this:
 
 $ cd bin/   # WRONG! WRONG! WRONG!
 $ python app.py  # WRONG! WRONG! WRONG!
-'''
+```
 Then you are doing it wrong. In all Python projects you do not cd into a
 lower directory to run things. You stay at the top and run everything from
 there so that all of the system can access all the modules and files.
 # Finally, use your web browser and go to http://localhost:8080/ and 
 you should see two things. First, in your browser you'll see 
 Hello, world!. Second, you'll see your Terminal with new output like this:
-'''
+```
 $ python bin/app.py
 http://0.0.0.0:8080/
 127.0.0.1:59542 - - [13/Jun/2011 11:44:43] "HTTP/1.1 GET /" - 200 OK
 127.0.0.1:59542 - - [13/Jun/2011 11:44:43] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
-'''
+```
 Those are log messages that lpthw.web prints out so you can see that the
 server is working, and what the browser is doing behind the scenes. The log
 messages help you debug and figure out when you have problems. For example,
@@ -81,7 +81,7 @@ the template that alters its contents.
 
 To make your bin/app.py do this, you need to add some code to tell lpthw.web
 where to load the template and to render it. Take that file and change it like this:
-'''python
+```python
 import web
 
 urls = (
@@ -99,7 +99,7 @@ class Index(object):
 
 if __name__ == "__main__":
     app.run()
-'''
+```
 ### In your bin/app.py you've added a new variable, render, which is a
   web.template.render object.
   
